@@ -10,6 +10,9 @@ namespace Git_NoteBook
 {
     public partial class Form1 : Form
     {
+        public string NamePerson { get; set; }
+        public string Phone { get; set; }
+        public string Adress { get; set; }
         public Form1()
         {
             InitializeComponent();
