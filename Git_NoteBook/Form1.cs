@@ -13,6 +13,9 @@ namespace Git_NoteBook
         public string NamePerson { get; set; }
         public string Phone { get; set; }
         public string Adress { get; set; }
+
+        public event EventHandler<EventArgs> SaveEvent;
+        public event EventHandler<EventArgs> LoadEvent;
         public Form1()
         {
             InitializeComponent();
