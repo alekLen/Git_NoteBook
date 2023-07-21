@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Git_NoteBook
 {
-    internal class SavingList
+    internal class SavingList :ISave
     {
 
         FileStream stream = null;
@@ -17,6 +17,13 @@ namespace Git_NoteBook
             stream = new FileStream(filename, FileMode.OpenOrCreate);
             formatter = new BinaryFormatter();
             formatter.Serialize(stream, list);
+            stream.Close();
+        }
+        public void Load(string filename)
+        {
+            stream = new FileStream(filename, FileMode.Open);
+            formatter = new BinaryFormatter();
+            list = (List<IPerson>)formatter.Deserialize(stream);
             stream.Close();
         }
     }
