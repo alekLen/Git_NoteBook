@@ -49,6 +49,7 @@
     <Compile Include="IForm1.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="ISave.cs" />
+    <Compile Include="ListOfMan.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
